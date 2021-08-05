@@ -47,6 +47,6 @@ This toy language (defined by the grammar below) supports a number of basic lang
 ### Further Examples
 | Approach | Program | Output |
 | - | - | - |
-| nested "let"s | define number let (number_one 7) let (number_two 11) (* number_one number_two) | 77 |
+| nested "let"s | let (number_one 7) let (number_two 11) (* number_one number_two) | 77 |
 
 This project was partially completed in fulfillment of the requirements of COMP 524 with Dr. Jeff Terrell at the University of North Carolina at Chapel Hill in spring 2021.
