@@ -1,4 +1,4 @@
-# toy-epi-language
+# toy-language-epi
 Environment-passing interpreter implementing a toy language in Racket.
 
 ## Description:
