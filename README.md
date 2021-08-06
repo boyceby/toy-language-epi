@@ -28,7 +28,7 @@ The toy language implemented by this EPI (defined by the grammar below) supports
 | - | - | - |
 | let | let (num 7) num | 7 |
 | define | define str "examplestring" <br/> str | "examplestring" |
-| lambda | (lambda (n) (+ 10 n) 3) | 13 |
+| lambda | define funct lambda (n) (+ 10 n) <br/> (funct 3) | 13 |
 
 ### Built-In Functions
 | Feature | Program | Output |
@@ -44,9 +44,11 @@ The toy language implemented by this EPI (defined by the grammar below) supports
 | String=? | (string=? "twin" "twin") | #t |
 | not | (not (= 4 4)) | #f |
 
-### Further Examples
+### Some Further Examples
 | Approach | Program | Output |
 | - | - | - |
 | nested "let"s | let (number_one 7) let (number_two 11) (* number_one number_two) | 77 |
+| closure | define n 1 <br/> define exampleclosurefunct let (m 8) lambda (x) (+ (- m n) x) <br/> (exampleclosurefunct 3) | 10 |
+| anonymous function invocation | (lambda (n) (string-append "Hello, " n) "Casper") | "Hello, Casper" |
 
 This project was partially completed in fulfillment of the requirements of COMP 524 with Dr. Jeff Terrell at the University of North Carolina at Chapel Hill in spring 2021.
