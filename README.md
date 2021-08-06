@@ -34,7 +34,7 @@ The toy language implemented by this EPI (defined by the grammar below) supports
 | Feature | Program | Output |
 | - | - | - |
 | + | (+ 5 7) | 12 |
-| - | (- 5 3) | 2 |
+| - | (- 5.75 3.25) | 2.5 |
 | \* | (\* 8 2) | 16 |
 | / | (/ 18 3) | 6 |
 | = | (= 1 2) | #f |
