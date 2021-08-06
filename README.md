@@ -2,7 +2,7 @@
 Environment-passing interpreter implementing a toy language in Racket.
 
 ## Description:
-The toy language implemented by this EPI (defined by the grammar below) supports a number of basic language features. Its data types include ints, floats, strings, and bools, and, being implemented by an environment-passing interpreter, the language also provides support for "let", "define", and "lambda" keywords, which together facilitate the ability to define functions, the use of closures, and a number of other interesting programmatic approaches. The value ultimately returned by the execution of a program in the language will be the result of the evaluation of the last "expr" in the program's "exprList".
+The toy language implemented by this EPI (defined by the grammar below) supports a number of basic language features. Its data types include ints, floats, strings, and bools, and its keywords include "let", "define", and "lambda", which together facilitate the ability to define functions, make use of closures, and employ a number of other interesting programmatic approaches. Additionally, the language supports a variety of built-in functions (which behaviorally take after the functions of the same name in the Racket language). The value ultimately returned by the execution of a program in the language will be the result of the evaluation of the last "expr" in the program's "exprList".
 
 ## Grammar:
 1. program := exprList
@@ -19,7 +19,7 @@ The toy language implemented by this EPI (defined by the grammar below) supports
 ## Features:
 - **Keywords:** let, define, lambda
 - **Data types:** int, float, string, bool
-- **Built-in function names:** +, -, *, /, =, <, string-append, string\<?, string=?, not
+- **Built-in functions:** +, -, *, /, =, <, string-append, string\<?, string=?, not
 
 ## Examples:
 
