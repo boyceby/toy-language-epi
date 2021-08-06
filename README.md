@@ -51,4 +51,17 @@ The toy language implemented by this EPI (defined by the grammar below) supports
 | closure | define n 1 <br/> define exampleclosurefunct let (m 8) lambda (x) (+ (- m n) x) <br/> (exampleclosurefunct 3) | 10 |
 | anonymous function invocation | (lambda (n) (string-append "Hello, " n) "Casper") | "Hello, Casper" |
 
+## To Use:
+To test the interpreter out, these files can be run from [DrRacket](https://racket-lang.org/), where the "eval" function from "eval.rkt" can be invoked in the interactions window with a string containing the sourcecode for a program, like so:
+
+    (eval 
+          "
+           define islessthanfive lambda (n) let (m 5) (< n m)
+           (islessthanfive 1)
+          "
+    )
+    
+    Output: #t
+
+
 This project was partially completed in fulfillment of the requirements of COMP 524 with Dr. Jeff Terrell at the University of North Carolina at Chapel Hill in spring 2021.
