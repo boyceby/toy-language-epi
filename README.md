@@ -41,7 +41,7 @@ The toy language implemented by this EPI (defined by the grammar below) supports
 | < | (< 1 100) | #t |
 | string-append | (string-append "this" " and that") | "this and that" |
 | string\<? | (string\<? "abc" "xyz") | #t |
-| String=? | (string=? "twin" "twin") | #t |
+| string=? | (string=? "twin" "twin") | #t |
 | not | (not (= 4 4)) | #f |
 
 ### Some Further Examples
