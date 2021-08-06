@@ -2,7 +2,11 @@
 Environment-passing interpreter implementing a toy language in Racket.
 
 ## Description:
+### Language
 The toy language implemented by this EPI (defined by the grammar below) supports a number of basic language features. Its data types include ints, floats, strings, and bools, and its keywords include "let", "define", and "lambda", which together facilitate the ability to define functions, create closures, and make use of several other interesting programmatic approaches. Additionally, the language supports a variety of rudimentary built-in functions (which behaviorally take after the functions of the same names in the Racket language). The value ultimately returned by the execution of a program in the language will be the result of the evaluation of the last "expr" in the program's "exprList".
+
+### Interpreter Design
+The design of the interpreter is broken up into three modules: "eval", "parse", and "lex". The "lex" module is responsible for converting a program's sourcecode string into a list of language tokens. These tokens are then used by the "parse" module to create a parse tree representative of the program's sourcecode based on the grammar defined below. After a parse tree is created by "parse", the "eval" module then evaluates this parse tree, ultimately returning the value resulting from the evaluation of the last "expr" in the program's "exprList" (as mentioned above). 
 
 ## Grammar:
 1. program := exprList
